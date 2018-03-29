@@ -15,7 +15,7 @@ redirect_rules = app.config['REDIRECT_RULES']
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def redirector(path):
-    host = request.headers.get('X-Forwarded-Host', None)
+    host = request.headers.get('Host', None)
 
     for request_host, redirect_target, redirect_code in redirect_rules:
         if host == request_host:
