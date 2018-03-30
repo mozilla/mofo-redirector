@@ -1,3 +1,10 @@
+from urllib.parse import (
+    urlparse,
+    urlunparse,
+    parse_qs,
+    urlencode,
+    ParseResult,
+)
 from flask import (
     Flask,
     request,
@@ -10,6 +17,21 @@ app = Flask(__name__, static_folder=None)
 app.config.from_object('config.Config')
 
 redirect_rules = app.config['REDIRECT_RULES']
+append_from = app.config['APPEND_FROM']
+force_ssl = app.config['FORCE_SSL']
+
+@app.before_request
+def force_ssl():
+    if not force_ssl:
+        return None
+
+    proto = request.headers['X-Forwarded-Proto']
+
+    if proto == 'https':
+        return None
+
+    url = request.url.replace('http://', 'https://', 1)
+    return redirect(url, code=301)
 
 
 @app.route('/', defaults={'path': ''})
@@ -17,17 +39,44 @@ redirect_rules = app.config['REDIRECT_RULES']
 def redirector(path):
     host = request.headers.get('Host', None)
 
-    for request_host, redirect_target, redirect_code in redirect_rules:
-        if host == request_host:
-            redirect_url = redirect_target
-            print(app.config['APPEND_FROM'])
-            if app.config['APPEND_FROM']:
-                redirect_url += '?from={}'.format(request_host)
+    if host in redirect_rules:
+        redirect_target, redirect_code, preserves = redirect_rules[host]
+        preserve_path, preserve_query = preserves
 
-            return redirect(redirect_url, code=redirect_code)
+        redirect_path = ''
+        redirect_query = ''
+
+        target_url = urlparse(redirect_target)
+
+        if preserve_path:
+            redirect_path = path
+
+        if preserve_query:
+            redirect_query = urlencode(request.args, doseq=True)
+
+        if append_from:
+            qs = parse_qs(redirect_query)
+            qs['from'] = host
+            redirect_query = urlencode(qs, doseq=True)
+
+        redirect_parse = ParseResult(
+            scheme=target_url.scheme,
+            netloc=target_url.netloc,
+            path=redirect_path,
+            query=redirect_query,
+            params='',
+            fragment=''
+        )
+
+        return redirect(urlunparse(redirect_parse), code=redirect_code.value)
 
     return abort(400)
 
+
+@app.after_request
+def response_headers(response):
+    response.headers['Server'] = 'MoFo Redirector'
+    return response
 
 if __name__ == '__main__':
     app.run()

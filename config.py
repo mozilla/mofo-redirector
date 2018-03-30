@@ -2,6 +2,7 @@
 # https://github.com/marchibbins/teela/blob/9d65abaff804f9a79483529ed194581feafdd745/teela/config.py
 
 import os
+from enum import Enum
 
 from dotenv import load_dotenv
 from pathlib import Path
@@ -23,6 +24,11 @@ def env_var(key, default=None):
     return val
 
 
+class ReturnCodes(Enum):
+    PERMANENT = 301
+    TEMPORARY = 307
+
+
 class Config(object):
     """
     Configure the application with environment variables
@@ -30,7 +36,17 @@ class Config(object):
 
     DEBUG = env_var('DEBUG', default=False)
     APPEND_FROM = env_var('APPEND_FROM', default=False)
+    FORCE_SSL = env_var('FORCE_SSL', default=False)
 
-    REDIRECT_RULES = [
-        ('mofo-redirector.herokuapp.com', 'https://foundation.mozilla.org/', 307)
-    ]
+    # Redirect Rules
+    # The key is the host header to match
+    # At [0]: the redirect target, without trailing slash
+    # At [1]: the HTTP status code to return - use the ReturnCodes enum
+    # At [2]: a Tuple, indicating if the path and query are to be preserved ( {path}, {query} )
+    REDIRECT_RULES = {
+        'mofo-redirector.herokuapp.com': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (True, True),
+        ),
+    }
