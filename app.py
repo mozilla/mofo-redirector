@@ -72,5 +72,6 @@ def response_headers(response):
     response.headers['Server'] = 'MoFo Redirector'
     return response
 
+
 if __name__ == '__main__':
     app.run()
