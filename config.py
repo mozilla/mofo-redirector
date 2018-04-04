@@ -54,22 +54,22 @@ class Config(object):
             (False, False),
         ),
         'www.hivelearningnetwork.org': (
-            'https://foundation.mozilla.org',
+            'https://foundation.mozilla.org/get-involved',
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
         'hivelearningnetwork.org': (
-            'https://foundation.mozilla.org',
+            'https://foundation.mozilla.org/get-involved',
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
         'www.hivelearningnetworks.org': (
-            'https://foundation.mozilla.org',
+            'https://foundation.mozilla.org/get-involved',
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
         'hivelearningnetworks.org': (
-            'https://foundation.mozilla.org',
+            'https://foundation.mozilla.org/get-involved',
             ReturnCodes.TEMPORARY,
             (False, False)
         ),

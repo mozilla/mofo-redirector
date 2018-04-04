@@ -49,6 +49,8 @@ def redirector(path):
 
         if preserve_path:
             redirect_path = path
+        else:
+            redirect_path = target_url.path
 
         if preserve_query:
             redirect_query = urlencode(request.args, doseq=True)
