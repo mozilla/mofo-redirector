@@ -17,6 +17,7 @@ app.config.from_object('config.Config')
 
 redirect_rules = app.config['REDIRECT_RULES']
 force_ssl = app.config['FORCE_SSL']
+debug = app.config['DEBUG']
 
 
 @app.before_request
@@ -37,7 +38,9 @@ def force_ssl():
 @app.route('/<path:path>')
 def redirector(path):
     host = request.headers.get('Host', None)
-    print('received request from {}'.format(host))
+
+    if debug:
+        print('received request from {}'.format(host))
 
     if host in redirect_rules:
         redirect_target, redirect_code, preserves = redirect_rules[host]
@@ -65,7 +68,12 @@ def redirector(path):
             fragment=''
         )
 
-        return redirect(urlunparse(redirect_parse), code=redirect_code.value)
+        final_redirect = urlunparse(redirect_parse)
+
+        if debug:
+            print('redirecting to {} with a {}'.format(final_redirect, redirect_code.value))
+
+        return redirect(redirect_parse, code=redirect_code.value)
 
     return abort(400)
 
