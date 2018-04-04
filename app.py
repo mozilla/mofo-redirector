@@ -18,6 +18,7 @@ app.config.from_object('config.Config')
 redirect_rules = app.config['REDIRECT_RULES']
 force_ssl = app.config['FORCE_SSL']
 
+
 @app.before_request
 def force_ssl():
     if not force_ssl:
