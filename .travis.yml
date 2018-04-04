@@ -4,6 +4,6 @@ python:
 before_install:
   pip install pipenv
 install:
-  - pipenv install
+  - pipenv install -d
 script:
   - pipenv run flake8 ./ --config=./tox.ini
