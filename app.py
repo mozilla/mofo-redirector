@@ -37,6 +37,7 @@ def force_ssl():
 @app.route('/<path:path>')
 def redirector(path):
     host = request.headers.get('Host', None)
+    print('received request from {}'.format(host))
 
     if host in redirect_rules:
         redirect_target, redirect_code, preserves = redirect_rules[host]
