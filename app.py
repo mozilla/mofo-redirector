@@ -1,7 +1,6 @@
 from urllib.parse import (
     urlparse,
     urlunparse,
-    parse_qs,
     urlencode,
     ParseResult,
 )
@@ -17,7 +16,6 @@ app = Flask(__name__, static_folder=None)
 app.config.from_object('config.Config')
 
 redirect_rules = app.config['REDIRECT_RULES']
-append_from = app.config['APPEND_FROM']
 force_ssl = app.config['FORCE_SSL']
 
 @app.before_request
@@ -53,11 +51,6 @@ def redirector(path):
 
         if preserve_query:
             redirect_query = urlencode(request.args, doseq=True)
-
-        if append_from:
-            qs = parse_qs(redirect_query)
-            qs['from'] = host
-            redirect_query = urlencode(qs, doseq=True)
 
         redirect_parse = ParseResult(
             scheme=target_url.scheme,

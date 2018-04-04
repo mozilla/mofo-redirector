@@ -35,7 +35,6 @@ class Config(object):
     """
 
     DEBUG = env_var('DEBUG', default=False)
-    APPEND_FROM = env_var('APPEND_FROM', default=False)
     FORCE_SSL = env_var('FORCE_SSL', default=False)
 
     # Redirect Rules
@@ -49,4 +48,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (True, True),
         ),
+        'chat.mozillafoundation.org': (
+            'https://mozfest.slack.com',
+            ReturnCodes.PERMANENT,
+            (True, False),
+        )
     }
