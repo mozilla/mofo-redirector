@@ -1,5 +1,7 @@
 # MoFo-Redirector
 
+[![Build Status](https://travis-ci.org/mozilla/mofo-redirector.svg?branch=master)](https://travis-ci.org/mozilla/mofo-redirector)
+
 The MoFo-Redirector is a small Flask application that serves to redirect deprecated and unused MoFo Domains.
 
 The domains served by the redirect are defined as Tuples in config.py:
