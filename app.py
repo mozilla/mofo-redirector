@@ -21,11 +21,11 @@ debug = app.config['DEBUG']
 
 
 @app.before_request
-def force_ssl():
+def enforce_ssl():
     if not force_ssl:
         return None
 
-    proto = request.headers['X-Forwarded-Proto']
+    proto = request.headers.get('X-Forwarded-Proto', None)
 
     if proto == 'https':
         return None
@@ -37,7 +37,12 @@ def force_ssl():
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def redirector(path):
-    host = request.headers.get('Host', None)
+    x_forwarded_host = request.headers.get('X-Forwarded-Host', None)
+
+    if x_forwarded_host:
+        host = x_forwarded_host
+    else:
+        host = request.headers.get('Host', None)
 
     if debug:
         print('received request from {}'.format(host))
@@ -73,7 +78,7 @@ def redirector(path):
         if debug:
             print('redirecting to {} with a {}'.format(final_redirect, redirect_code.value))
 
-        return redirect(redirect_parse, code=redirect_code.value)
+        return redirect(final_redirect, code=redirect_code.value)
 
     return abort(400)
 
