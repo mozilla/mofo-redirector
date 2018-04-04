@@ -51,6 +51,26 @@ class Config(object):
         'chat.mozillafoundation.org': (
             'https://mozfest.slack.com',
             ReturnCodes.PERMANENT,
-            (True, False),
-        )
+            (False, False),
+        ),
+        'www.hivelearningnetwork.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'hivelearningnetwork.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'www.hivelearningnetworks.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'hivelearningnetworks.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
