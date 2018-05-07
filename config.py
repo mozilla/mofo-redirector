@@ -73,4 +73,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'validator.openbadges.org': (
+            'https://openbadgesvalidator.imsglobal.org',
+            ReturnCodes.PERMANENT,
+            (True, True)
+        )
     }
