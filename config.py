@@ -77,5 +77,10 @@ class Config(object):
             'https://openbadgesvalidator.imsglobal.org',
             ReturnCodes.PERMANENT,
             (True, True)
+        ),
+        'indicators.internethealthreport.org': (
+            'https://internethealthreport.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
         )
     }
