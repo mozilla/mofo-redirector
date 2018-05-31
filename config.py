@@ -82,5 +82,15 @@ class Config(object):
             'https://internethealthreport.org',
             ReturnCodes.TEMPORARY,
             (False, False)
+        ),
+        'www.typeoutloud.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'science.typeoutloud.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
         )
     }
