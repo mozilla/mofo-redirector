@@ -92,5 +92,15 @@ class Config(object):
             'https://foundation.mozilla.org',
             ReturnCodes.TEMPORARY,
             (False, False)
-        )
+        ),
+        'www.responsiblecs.org': (
+            'https://foundation.mozilla.org/initiatives/responsible-cs/',
+            ReturnCodes.TEMPORARY,
+            (False, True)
+        ),
+        'www.responsiblecschallenge.org': (
+            'https://foundation.mozilla.org/initiatives/responsible-cs/',
+            ReturnCodes.TEMPORARY,
+            (False, True)
+        ),
     }
