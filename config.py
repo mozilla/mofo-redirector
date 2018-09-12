@@ -103,4 +103,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, True)
         ),
+        'www.iheartopendata.org': (
+            'https://foundation.mozilla.org/campaigns/i-heart-open-data/',
+            ReturnCodes.TEMPORARY,
+            (False, True)
+        ),
     }
