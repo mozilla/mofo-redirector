@@ -108,4 +108,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, True)
         ),
+        'fbsurvey.mozillafoundation.org': (
+            'https://github.com/mozilla/shinysurvey/',
+            ReturnCodes.TEMPORARY,
+            (False, True)
+        ),
     }
