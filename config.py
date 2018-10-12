@@ -113,4 +113,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, True)
         ),
+        'app.mozillafestival.org': (
+            'https://guidebook.com/guide/147793/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
