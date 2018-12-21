@@ -118,4 +118,19 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'forum.learning.mozilla.org': (
+            'https://discourse.mozilla.org/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'discourse.mozilla-advocacy.org': (
+            'https://discourse.mozilla.org/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'forum.mozillascience.org': (
+            'https://discourse.mozilla.org/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
