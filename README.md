@@ -12,7 +12,7 @@ The first value is the Host header value to match in an incoming request. The se
 
 ## How to add a new redirect
 
-- Create a PR (instruction in `config.py`),
+- Create a PR (instructions in `config.py`),
 - Wait for review and merge,
 - Detach the domain from current heroku app, attach it to mofo-redirector,
 - in Route53 update the Hosted Zone record for redirected domain to point to the redirector heroku app.
