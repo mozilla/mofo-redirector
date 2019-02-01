@@ -133,4 +133,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'popcorn.webmaker.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
