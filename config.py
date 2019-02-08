@@ -138,4 +138,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'postcrimes.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
