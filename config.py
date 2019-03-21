@@ -148,4 +148,29 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'mozillapopcorn.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'www.mozillapopcorn.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'maker.mozillapopcorn.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'static.mozillapopcorn.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'tedglobal.mozillapopcorn.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
