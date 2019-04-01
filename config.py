@@ -173,4 +173,9 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'directory.hivelearningnetworks.org': (
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
