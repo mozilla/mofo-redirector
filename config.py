@@ -178,9 +178,4 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
-        'privacyfirst.in': (
-            'https://foundation.mozilla.org/en/campaigns/india-privacy-law/',
-            ReturnCodes.TEMPORARY,
-            (False, False)
-        ),
     }
