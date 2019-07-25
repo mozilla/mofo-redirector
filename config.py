@@ -105,7 +105,7 @@ class Config(object):
         ),
         'www.iheartopendata.org': (
             'https://foundation.mozilla.org/campaigns/i-heart-open-data/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
         ),
         'fbsurvey.mozillafoundation.org': (
@@ -135,7 +135,7 @@ class Config(object):
         ),
         'popcorn.webmaker.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'postcrimes.org': (
