@@ -150,32 +150,32 @@ class Config(object):
         ),
         'mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'maker.mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'static.mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'tedglobal.mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'directory.hivelearningnetworks.org': (
             'https://foundation.mozilla.org/en/artifacts/hive-learning-networks/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
     }
