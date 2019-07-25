@@ -95,12 +95,12 @@ class Config(object):
         ),
         'www.responsiblecs.org': (
             'https://foundation.mozilla.org/initiatives/responsible-cs/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
         ),
         'www.responsiblecschallenge.org': (
             'https://foundation.mozilla.org/initiatives/responsible-cs/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
         ),
         'www.iheartopendata.org': (
