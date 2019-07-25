@@ -85,12 +85,12 @@ class Config(object):
         ),
         'www.typeoutloud.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'science.typeoutloud.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.responsiblecs.org': (
