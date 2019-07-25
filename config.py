@@ -54,23 +54,23 @@ class Config(object):
             (False, False),
         ),
         'www.hivelearningnetwork.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'hivelearningnetwork.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.hivelearningnetworks.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'hivelearningnetworks.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'validator.openbadges.org': (
