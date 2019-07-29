@@ -159,7 +159,7 @@ class Config(object):
             (False, False)
         ),
         'maker.mozillapopcorn.org': (
-            'https://foundation.mozilla.org',
+            'https://foundation.mozilla.org/en/artifacts/popcorn-maker',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
