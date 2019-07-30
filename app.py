@@ -24,7 +24,6 @@ def create_app(test_config=None):
     force_ssl = app.config['FORCE_SSL']
     debug = app.config['DEBUG']
 
-
     @app.before_request
     def enforce_ssl():
         if not force_ssl:
@@ -37,7 +36,6 @@ def create_app(test_config=None):
 
         url = request.url.replace('http://', 'https://', 1)
         return redirect(url, code=301)
-
 
     @app.route('/', defaults={'path': ''})
     @app.route('/<path:path>')
@@ -86,7 +84,6 @@ def create_app(test_config=None):
             return redirect(final_redirect, code=redirect_code.value)
 
         return abort(400)
-
 
     @app.after_request
     def response_headers(response):
