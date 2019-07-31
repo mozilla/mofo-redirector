@@ -7,3 +7,4 @@ install:
   - pipenv install -d
 script:
   - pipenv run flake8 ./ --config=./tox.ini
+  - pipenv run pytest
