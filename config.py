@@ -54,23 +54,23 @@ class Config(object):
             (False, False),
         ),
         'www.hivelearningnetwork.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'hivelearningnetwork.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.hivelearningnetworks.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'hivelearningnetworks.org': (
-            'https://foundation.mozilla.org/get-involved',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'validator.openbadges.org': (
@@ -85,27 +85,27 @@ class Config(object):
         ),
         'www.typeoutloud.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'science.typeoutloud.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.responsiblecs.org': (
             'https://foundation.mozilla.org/initiatives/responsible-cs/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
         ),
         'www.responsiblecschallenge.org': (
             'https://foundation.mozilla.org/initiatives/responsible-cs/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
         ),
         'www.iheartopendata.org': (
             'https://foundation.mozilla.org/campaigns/i-heart-open-data/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
         ),
         'fbsurvey.mozillafoundation.org': (
@@ -135,7 +135,7 @@ class Config(object):
         ),
         'popcorn.webmaker.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'postcrimes.org': (
@@ -150,32 +150,32 @@ class Config(object):
         ),
         'mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'maker.mozillapopcorn.org': (
-            'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            'https://foundation.mozilla.org/en/artifacts/popcorn-maker',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'static.mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'tedglobal.mozillapopcorn.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'directory.hivelearningnetworks.org': (
             'https://foundation.mozilla.org/en/artifacts/hive-learning-networks/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
     }
