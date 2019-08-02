@@ -2,6 +2,6 @@
 __pycache__
 .idea/
 
-# Nix shell
+# Nix Shell
 .envrc
 shell.nix

@@ -39,7 +39,7 @@ class Config(object):
 
     # Redirect Rules
     # The key is the host header to match
-    # At [0]: the redirect target, without trailing slash
+    # At [0]: the redirect target, without trailing slash, prefixed by https
     # At [1]: the HTTP status code to return - use the ReturnCodes enum
     # At [2]: a Tuple, indicating if the path and query are to be preserved ( {path}, {query} )
     REDIRECT_RULES = {
