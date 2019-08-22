@@ -178,4 +178,14 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
+        'backpack.openbadges.org': (
+            'https://backpack.openbadges.org.badgr.io',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'beta.openbadges.org': (
+            'https://foundation.mozilla.org/en/artifacts/mozilla-backpack',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
