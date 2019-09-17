@@ -188,4 +188,14 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'firefox10.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'www.firefox10.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
     }
