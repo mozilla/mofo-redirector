@@ -184,7 +184,7 @@ class Config(object):
             (False, False)
         ),
         'beta.openbadges.org': (
-            'https://foundation.mozilla.org/en/artifacts/mozilla-backpack',
+            'https://foundation.mozilla.org/en/artifacts/mozilla-backpack/',
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
