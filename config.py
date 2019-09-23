@@ -178,11 +178,6 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
-        'backpack.openbadges.org': (
-            'https://backpack.openbadges.org.badgr.io',
-            ReturnCodes.TEMPORARY,
-            (False, False)
-        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
