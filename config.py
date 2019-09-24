@@ -183,10 +183,10 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
-        'beta.openbadges.org': (
-            'https://foundation.mozilla.org/en/artifacts/mozilla-backpack',
+        'dicourse.mozillafestival.org': (
+            'https://discourse-mozfest-redirect.netlify.com',
             ReturnCodes.TEMPORARY,
-            (False, False)
+            (True, True)
         ),
         'firefox10.org': (
             'https://foundation.mozilla.org',
@@ -198,4 +198,12 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        #
+        # Disabled for now due to large volumes of non-user traffic
+        # 'beta.openbadges.org': (
+        #     'https://foundation.mozilla.org/en/artifacts/mozilla-backpack/',
+        #     ReturnCodes.TEMPORARY,
+        #     (False, False)
+        # ),
+        #
     }
