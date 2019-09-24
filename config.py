@@ -183,6 +183,16 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (True, True)
         ),
+        'firefox10.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'www.firefox10.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
