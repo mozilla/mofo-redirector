@@ -183,6 +183,11 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'dicourse.mozillafestival.org': (
+            'https://discourse-mozfest-redirect.netlify.com',
+            ReturnCodes.TEMPORARY,
+            (True, True)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
