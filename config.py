@@ -178,11 +178,6 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
-        'backpack.openbadges.org': (
-            'https://backpack.openbadges.org.badgr.io',
-            ReturnCodes.TEMPORARY,
-            (False, False)
-        ),
         'dicourse.mozillafestival.org': (
             'https://discourse-mozfest-redirect.netlify.com',
             ReturnCodes.TEMPORARY,
