@@ -178,7 +178,7 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
-        'dicourse.mozillafestival.org': (
+        'discourse.mozillafestival.org': (
             'https://discourse-mozfest-redirect.netlify.com',
             ReturnCodes.TEMPORARY,
             (True, True)
