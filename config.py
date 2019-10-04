@@ -193,6 +193,11 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'www.drumbeat.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
