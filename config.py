@@ -198,6 +198,41 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (False, False)
         ),
+        'thimble.mozilla.org': (
+            'https://foundation.mozilla.org/en/artifacts/thimble/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'thimble.webmaker.org': (
+            'https://foundation.mozilla.org/en/artifacts/thimble/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'mozillathimblelivepreview.net': (
+            'https://foundation.mozilla.org/en/artifacts/thimble/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'goggles.mozilla.org': (
+            'https://foundation.mozilla.org/en/artifacts/x-ray-goggles/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'goggles.webmaker.org': (
+            'https://foundation.mozilla.org/en/artifacts/x-ray-goggles/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'thimbleprojects.org': (
+            'https://foundation.mozilla.org/en/artifacts/thimble/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        ),
+        'www.thimbleprojects.org': (
+            'https://foundation.mozilla.org/en/artifacts/thimble/',
+            ReturnCodes.TEMPORARY,
+            (False, False)
+        )
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
