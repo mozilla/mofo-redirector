@@ -227,7 +227,12 @@ class Config(object):
             'https://foundation.mozilla.org/en/artifacts/thimble/',
             ReturnCodes.TEMPORARY,
             (False, False)
-        )
+        ),
+        'give.mozilla.org': (
+            'https://donate.mozilla.org',
+            ReturnCodes.TEMPORARY,
+            (True, True)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
