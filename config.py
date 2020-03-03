@@ -236,17 +236,18 @@ class Config(object):
         'www.webmaker.org': (
             'https://foundation.mozilla.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
-            (True, True)
+            (False, True)
         ),
         'beta.webmaker.org': (
             'https://foundation.mozilla.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
-            (True, True)
+            (False, True)
         ),
         'events.webmaker.org': (
             'https://foundation.mozilla.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
-            (True, True)
+            (False, True)
+
         ),
         #
         # Disabled for now due to large volumes of non-user traffic
