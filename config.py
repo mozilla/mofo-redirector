@@ -238,6 +238,11 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (True, True)
         ),
+        'teach.mozilla.org': (
+            'https://foundation.mozilla.org/en/opportunity/web-literacy/',
+            ReturnCodes.PERMANENT,
+            (True, True)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
