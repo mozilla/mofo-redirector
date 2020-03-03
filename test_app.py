@@ -6,9 +6,11 @@ def assert_redirect(response, expected_status_code, expected_location):
     assert response.status_code == expected_status_code
     assert response.headers["Location"] == expected_location
 
+
 def assert_robots(response):
     assert response.status_code == 200
     assert response.get_data(as_text=True) == "User-agent: *\nDisallow: /"
+
 
 def client(rules):
     config = {
@@ -88,6 +90,7 @@ def test_keep_path_and_query():
 
     assert_redirect(r, 307, "https://another-example.com/path/?such_query=very_value")
 
+
 def test_robots():
     test_client = client(
         {'example.com': (
@@ -100,4 +103,3 @@ def test_robots():
     r = test_client.get("/robots.txt", headers=[("Host", "example.com")])
 
     assert_robots(r)
-
