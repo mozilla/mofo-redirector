@@ -233,6 +233,21 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (True, True)
         ),
+        'www.webmaker.org': (
+            'https://foundation.mozilla.org/en/artifacts/webmaker/',
+            ReturnCodes.PERMANENT,
+            (True, True)
+        ),
+        'beta.webmaker.org': (
+            'https://foundation.mozilla.org/en/artifacts/webmaker/',
+            ReturnCodes.PERMANENT,
+            (True, True)
+        ),
+        'events.webmaker.org': (
+            'https://foundation.mozilla.org/en/artifacts/webmaker/',
+            ReturnCodes.PERMANENT,
+            (True, True)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
