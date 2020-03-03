@@ -9,6 +9,7 @@ from flask import (
     request,
     redirect,
     abort,
+    make_response,
 )
 
 
@@ -84,6 +85,12 @@ def create_app(test_config=None):
             return redirect(final_redirect, code=redirect_code.value)
 
         return abort(400)
+
+    @app.route('/robots.txt')
+    def send_robots_txt():
+        response = make_response('User-agent: *\nDisallow: /')
+        response.headers['Content-Type'] = 'text/plain; charset=utf-8'
+        return response
 
     @app.after_request
     def response_headers(response):
