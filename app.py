@@ -38,6 +38,12 @@ def create_app(test_config=None):
         url = request.url.replace('http://', 'https://', 1)
         return redirect(url, code=301)
 
+    @app.route('/robots.txt')
+    def send_robots_txt():
+        response = make_response('User-agent: *\nDisallow: /')
+        response.headers['Content-Type'] = 'text/plain; charset=utf-8'
+        return response
+
     @app.route('/', defaults={'path': ''})
     @app.route('/<path:path>')
     def redirector(path):
@@ -85,12 +91,6 @@ def create_app(test_config=None):
             return redirect(final_redirect, code=redirect_code.value)
 
         return abort(400)
-
-    @app.route('/robots.txt')
-    def send_robots_txt():
-        response = make_response('User-agent: *\nDisallow: /')
-        response.headers['Content-Type'] = 'text/plain; charset=utf-8'
-        return response
 
     @app.after_request
     def response_headers(response):
