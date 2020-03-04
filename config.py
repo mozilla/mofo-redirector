@@ -236,12 +236,13 @@ class Config(object):
         'learning.mozilla.org': (
             'https://foundation.mozilla.org/en/opportunity/web-literacy/',
             ReturnCodes.TEMPORARY,
-            (True, True)
+            (False, True)
         ),
         'teach.mozilla.org': (
             'https://foundation.mozilla.org/en/opportunity/web-literacy/',
             ReturnCodes.TEMPORARY,
-            (True, True)
+            (False, True)
+
         ),
         'www.webmaker.org': (
             'https://foundation.mozilla.org/en/artifacts/webmaker/',
