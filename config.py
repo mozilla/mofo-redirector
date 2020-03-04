@@ -235,12 +235,12 @@ class Config(object):
         ),
         'learning.mozilla.org': (
             'https://foundation.mozilla.org/en/opportunity/web-literacy/',
-            ReturnCodes.PERMANENT,
+            ReturnCodes.TEMPORARY,
             (True, True)
         ),
         'teach.mozilla.org': (
             'https://foundation.mozilla.org/en/opportunity/web-literacy/',
-            ReturnCodes.PERMANENT,
+            ReturnCodes.TEMPORARY,
             (True, True)
         ),
         #
