@@ -7,6 +7,11 @@ def assert_redirect(response, expected_status_code, expected_location):
     assert response.headers["Location"] == expected_location
 
 
+def assert_robots(response):
+    assert response.status_code == 200
+    assert response.get_data(as_text=True) == "User-agent: *\nDisallow: /"
+
+
 def client(rules):
     config = {
         "REDIRECT_RULES": rules,
@@ -67,9 +72,9 @@ def test_keep_path():
         )}
     )
 
-    r = test_client.get("/robots.txt", headers=[("Host", "example.com")])
+    r = test_client.get("/path/", headers=[("Host", "example.com")])
 
-    assert_redirect(r, 307, "https://another-example.com/robots.txt")
+    assert_redirect(r, 307, "https://another-example.com/path/")
 
 
 def test_keep_path_and_query():
@@ -81,6 +86,20 @@ def test_keep_path_and_query():
         )}
     )
 
-    r = test_client.get("/robots.txt", headers=[("Host", "example.com")], query_string="such_query=very_value")
+    r = test_client.get("/path/", headers=[("Host", "example.com")], query_string="such_query=very_value")
 
-    assert_redirect(r, 307, "https://another-example.com/robots.txt?such_query=very_value")
+    assert_redirect(r, 307, "https://another-example.com/path/?such_query=very_value")
+
+
+def test_robots():
+    test_client = client(
+        {'example.com': (
+            "https://another-example.com",
+            ReturnCodes.TEMPORARY,
+            (True, False)
+        )}
+    )
+
+    r = test_client.get("/robots.txt", headers=[("Host", "example.com")])
+
+    assert_robots(r)
