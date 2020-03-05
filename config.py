@@ -233,6 +233,17 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (True, True)
         ),
+        'learning.mozilla.org': (
+            'https://foundation.mozilla.org/en/opportunity/web-literacy/',
+            ReturnCodes.TEMPORARY,
+            (False, True)
+        ),
+        'teach.mozilla.org': (
+            'https://foundation.mozilla.org/en/opportunity/web-literacy/',
+            ReturnCodes.TEMPORARY,
+            (False, True)
+
+        ),
         'www.webmaker.org': (
             'https://foundation.mozilla.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
@@ -247,7 +258,6 @@ class Config(object):
             'https://foundation.mozilla.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
             (False, True)
-
         ),
         #
         # Disabled for now due to large volumes of non-user traffic
