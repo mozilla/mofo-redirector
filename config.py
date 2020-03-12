@@ -259,6 +259,11 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, True)
         ),
+        'codemoji.org': (
+            'https://foundation.mozilla.org/en/artifacts/codemoji/',
+            ReturnCodes.PERMANENT,
+            (False, False)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
