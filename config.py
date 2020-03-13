@@ -274,6 +274,11 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
+        'www.mozillascience.org': (
+            'https://wiki.mozilla.org/ScienceLab',
+            ReturnCodes.PERMANENT,
+            (False, False)
+        ),
         #
         # Disabled for now due to large volumes of non-user traffic
         # 'beta.openbadges.org': (
