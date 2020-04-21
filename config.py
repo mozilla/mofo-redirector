@@ -260,7 +260,7 @@ class Config(object):
             (False, True)
         ),
         'codemoji.org': (
-            'https://foundation.mozilla.org/en/artifacts/codemoji/',
+            'https://foundation.mozilla.org/en/campaigns/codemoji/',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
