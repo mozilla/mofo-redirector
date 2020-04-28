@@ -79,8 +79,8 @@ class Config(object):
             (True, True)
         ),
         'indicators.internethealthreport.org': (
-            'https://internethealthreport.org',
-            ReturnCodes.TEMPORARY,
+            'https://internethealthreport.consider.it',
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.typeoutloud.org': (
@@ -268,10 +268,5 @@ class Config(object):
             'https://wiki.mozilla.org/ScienceLab',
             ReturnCodes.PERMANENT,
             (False, False)
-        ),
-        'indicators.internethealthreport.org': (
-            'https://internethealthreport.consider.it',
-            ReturnCodes.PERMANENT,
-            (False, False)
-        ),
+        )
     }
