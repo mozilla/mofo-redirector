@@ -1,6 +1,7 @@
 .env
 __pycache__
 .idea/
+.vscode/
 
 # Nix Shell
 .envrc
