@@ -269,12 +269,9 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
-        #
-        # Disabled for now due to large volumes of non-user traffic
-        # 'beta.openbadges.org': (
-        #     'https://foundation.mozilla.org/en/artifacts/mozilla-backpack/',
-        #     ReturnCodes.TEMPORARY,
-        #     (False, False)
-        # ),
-        #
+        'indicators.internethealthreport.org': (
+            'https://internethealthreport.consider.it',
+            ReturnCodes.PERMANENT,
+            (False, False)
+        ),
     }
