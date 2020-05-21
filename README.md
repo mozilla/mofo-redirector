@@ -10,6 +10,13 @@ The domains served by the redirect are defined as Tuples in config.py:
 
 The first value is the Host header value to match in an incoming request. The second is the target of the redirect. The third value is the redirect code to use.
 
+## How to setup local dev
+
+- Create a virtualenv: `python -m venv venv`. Activate it.
+- Install pip-tools: `pip install pip-tools`.
+- Install python dependencies by running `pip-sync requirements.txt dev-requirements.txt`.
+- Run the tests with `pytest`.
+
 ## How to add a new redirect
 
 - Create a PR (instructions in `config.py`),

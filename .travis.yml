@@ -1,10 +1,9 @@
 language: python
 python:
-  - '3.6'
-before_install:
-  pip install pipenv
+  - '3.7'
 install:
-  - pipenv install -d
+  - pip install --upgrade pip
+  - pip install -r requirements.txt -r dev-requirements.txt
 script:
-  - pipenv run flake8 ./ --config=./tox.ini
-  - pipenv run pytest
+  - flake8 ./ --config=./tox.ini
+  - pytest
