@@ -259,11 +259,6 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, True)
         ),
-        'codemoji.org': (
-            'https://foundation.mozilla.org/en/campaigns/codemoji/',
-            ReturnCodes.PERMANENT,
-            (False, False)
-        ),
         'science.mozilla.org': (
             'https://wiki.mozilla.org/ScienceLab',
             ReturnCodes.PERMANENT,
