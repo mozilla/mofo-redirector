@@ -115,22 +115,22 @@ class Config(object):
         ),
         'app.mozillafestival.org': (
             'https://guidebook.com/guide/147793/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'forum.learning.mozilla.org': (
             'https://discourse.mozilla.org/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'discourse.mozilla-advocacy.org': (
             'https://discourse.mozilla.org/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'forum.mozillascience.org': (
             'https://discourse.mozilla.org/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'popcorn.webmaker.org': (
@@ -140,12 +140,12 @@ class Config(object):
         ),
         'postcrimes.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.postcrimes.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'mozillapopcorn.org': (
@@ -180,67 +180,67 @@ class Config(object):
         ),
         'discourse.mozillafestival.org': (
             'https://discourse-mozfest-redirect.netlify.com',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (True, True)
         ),
         'firefox10.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.firefox10.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.drumbeat.org': (
             'https://foundation.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'thimble.mozilla.org': (
             'https://foundation.mozilla.org/en/artifacts/thimble/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'thimble.webmaker.org': (
             'https://foundation.mozilla.org/en/artifacts/thimble/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.mozillathimblelivepreview.net': (
             'https://foundation.mozilla.org/en/artifacts/thimble/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'goggles.mozilla.org': (
             'https://foundation.mozilla.org/en/artifacts/x-ray-goggles/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'goggles.webmaker.org': (
             'https://foundation.mozilla.org/en/artifacts/x-ray-goggles/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.thimbleprojects.org': (
             'https://foundation.mozilla.org/en/artifacts/thimble/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, False)
         ),
         'give.mozilla.org': (
             'https://donate.mozilla.org',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (True, True)
         ),
         'learning.mozilla.org': (
             'https://foundation.mozilla.org/en/opportunity/web-literacy/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
         ),
         'teach.mozilla.org': (
             'https://foundation.mozilla.org/en/opportunity/web-literacy/',
-            ReturnCodes.TEMPORARY,
+            ReturnCodes.PERMANENT,
             (False, True)
 
         ),
