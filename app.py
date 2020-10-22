@@ -57,6 +57,10 @@ def create_app(test_config=None):
         if debug:
             print('received request from {}'.format(host))
 
+        # Prevent redirect for resources such as JS, CSS and images and return HTTP 410 Gone
+        if path.endswith(('.js', '.css', '.png', '.svg', '.ico', '.txt')):
+            return abort(410)
+
         if host in redirect_rules:
             redirect_target, redirect_code, preserves = redirect_rules[host]
             preserve_path, preserve_query = preserves
@@ -73,10 +77,6 @@ def create_app(test_config=None):
 
             if preserve_query:
                 redirect_query = urlencode(request.args, doseq=True)
-
-            # Prevent redirect for resources such as JS, CSS and images and return HTTP 410 Gone
-            if redirect_path.endswith(('.js', '.css', '.png', '.svg', '.ico', '.txt')):
-                return abort(410)
 
             redirect_parse = ParseResult(
                 scheme=target_url.scheme,
