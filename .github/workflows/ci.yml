@@ -1,0 +1,23 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ 'master' ]
+  pull_request:
+    branches: [ 'master' ]
+
+jobs:
+  test_ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install Python Dependencies
+      run: pip install -r requirements.txt -r dev-requirements.txt
+    - name: Run Tests
+      run: |
+        flake8 ./ --config=./tox.ini
+        pytest
