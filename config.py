@@ -263,5 +263,10 @@ class Config(object):
             'https://wiki.mozilla.org/ScienceLab',
             ReturnCodes.PERMANENT,
             (False, False)
+        ),
+        'schedule.mozillafestival.org': (
+            'https://www.mozillafestival.org',
+            ReturnCodes.PERMANENT,
+            (False, False)
         )
     }
