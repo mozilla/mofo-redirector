@@ -198,17 +198,18 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
-        # # Removing to stop scraper DDoSing MoFo. The Thimble project was archived 2019.
-        #         'thimble.mozilla.org': (
-        #             'https://foundation.mozilla.org/en/artifacts/thimble/',
-        #             ReturnCodes.PERMANENT,
-        #             (False, False)
-        #         ),
-        #         'thimble.webmaker.org': (
-        #             'https://foundation.mozilla.org/en/artifacts/thimble/',
-        #             ReturnCodes.PERMANENT,
-        #             (False, False)
-        #         ),
+        # Removing to stop scraper DDoSing MoFo. The Thimble project was archived 2019.
+        #
+        # 'thimble.mozilla.org': (
+        #     'https://foundation.mozilla.org/en/artifacts/thimble/',
+        #     ReturnCodes.PERMANENT,
+        #     (False, False)
+        # ),
+        # 'thimble.webmaker.org': (
+        #     'https://foundation.mozilla.org/en/artifacts/thimble/',
+        #     ReturnCodes.PERMANENT,
+        #     (False, False)
+        # ),
         'www.mozillathimblelivepreview.net': (
             'https://foundation.mozilla.org/en/artifacts/thimble/',
             ReturnCodes.PERMANENT,
@@ -224,11 +225,13 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
-        'www.thimbleprojects.org': (
-            'https://foundation.mozilla.org/en/artifacts/thimble/',
-            ReturnCodes.PERMANENT,
-            (False, False)
-        ),
+        # Removing to stop scraper DDoSing MoFo. The Thimble project was archived 2019.
+        #
+        # 'www.thimbleprojects.org': (
+        #     'https://foundation.mozilla.org/en/artifacts/thimble/',
+        #     ReturnCodes.PERMANENT,
+        #     (False, False)
+        # ),
         'give.mozilla.org': (
             'https://donate.mozilla.org',
             ReturnCodes.PERMANENT,
