@@ -77,6 +77,8 @@ def create_app(test_config=None):
 
             if preserve_query:
                 redirect_query = urlencode(request.args, doseq=True)
+            else:
+                redirect_query = target_url.query
 
             redirect_parse = ParseResult(
                 scheme=target_url.scheme,
