@@ -269,7 +269,7 @@ class Config(object):
             (False, False)
         ),
         'schedule.mozillafestival.org': (
-            'https://www.mozillafestival.org/en/the-mozfest-plaza-is-closed/'
+            'https://www.mozillafestival.org/en/the-mozfest-plaza-is-closed/' \
             '?utm_source=schedule&utm_medium=redirect&utm_campaign=plaza_closure',
             ReturnCodes.TEMPORARY,
             (False, False)
