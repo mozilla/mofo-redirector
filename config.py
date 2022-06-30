@@ -272,6 +272,6 @@ class Config(object):
             'https://www.mozillafestival.org/en/the-mozfest-plaza-is-closed/' \
             '?utm_source=schedule&utm_medium=redirect&utm_campaign=plaza_closure',
             ReturnCodes.TEMPORARY,
-            (False, False)
+            (False, True)
         )
     }
