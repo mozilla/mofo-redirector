@@ -58,6 +58,22 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, True),
         ),
+        # Explicit rules for known donate.mozilla.org subpaths
+        'donate.mozilla.org/help': (
+            'https://foundation.mozilla.org/donate/help',
+            ReturnCodes.PERMANENT,
+            (False, True),
+        ),
+        'donate.mozilla.org/faq': (
+            'https://foundation.mozilla.org/donate/faq',
+            ReturnCodes.PERMANENT,
+            (False, True),
+        ),
+        'donate.mozilla.org/ways-to-give': (
+            'https://foundation.mozilla.org/donate/ways-to-give',
+            ReturnCodes.PERMANENT,
+            (False, True),
+        ),
         'www.hivelearningnetwork.org': (
             'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
             ReturnCodes.PERMANENT,
