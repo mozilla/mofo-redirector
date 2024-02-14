@@ -16,7 +16,7 @@ def client(rules):
     config = {
         "REDIRECT_RULES": rules,
         "FORCE_SSL": False,
-        "DEBUG": True
+        "DEBUG": False
     }
     return create_app(config).test_client()
 
