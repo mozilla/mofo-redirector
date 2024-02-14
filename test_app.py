@@ -104,9 +104,11 @@ def test_robots():
 
     assert_robots(r)
 
+
 def test_donate_mozilla_org_redirect_handling():
     """
-    Verifies that requests to donate.mozilla.org are correctly redirected with language codes removed and `/donate/` prepended.
+    Validates redirection logic for donate.mozilla.org, ensuring correct path handling,
+    removal of language codes, and preservation of query parameters.
     """
     test_client = client({
         'donate.mozilla.org': (

@@ -13,6 +13,7 @@ from flask import (
     make_response,
 )
 
+
 def create_app(test_config=None):
     app = Flask(__name__, static_folder=None)
 
@@ -43,7 +44,6 @@ def create_app(test_config=None):
         response = make_response('User-agent: *\nDisallow: /')
         response.headers['Content-Type'] = 'text/plain; charset=utf-8'
         return response
-
 
     def handle_donate_mozilla_org(path):
         """
