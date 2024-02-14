@@ -54,9 +54,9 @@ class Config(object):
             (False, False),
         ),
         'donate.mozilla.org': (
-            'https://foundation.mozilla.org/donate',
+            'https://foundation.mozilla.org',
             ReturnCodes.PERMANENT,
-            (False, True),
+            (True, True),
         ),
         'www.hivelearningnetwork.org': (
             'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
