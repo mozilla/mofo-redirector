@@ -11,11 +11,11 @@ mccabe==0.6.1             # via flake8
 more-itertools==8.3.0     # via pytest
 packaging==20.3           # via pytest
 pluggy==0.13.1            # via pytest
-py==1.8.1                 # via pytest
+py==1.11.0                 # via pytest
 pycodestyle==2.6.0        # via flake8
 pyflakes==2.2.0           # via flake8
 pyparsing==2.4.7          # via packaging
-pytest==5.4.2             # via -r dev-requirements.in
+pytest==8.0.1             # via -r dev-requirements.in
 six==1.14.0               # via packaging
 wcwidth==0.1.9            # via pytest
 zipp==3.1.0               # via importlib-metadata
