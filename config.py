@@ -53,6 +53,11 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False),
         ),
+        'donate.mozilla.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.PERMANENT,
+            (True, True),
+        ),
         'www.hivelearningnetwork.org': (
             'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
             ReturnCodes.PERMANENT,

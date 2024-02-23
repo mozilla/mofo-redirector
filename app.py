@@ -1,3 +1,4 @@
+import re
 from urllib.parse import (
     urlparse,
     urlunparse,
@@ -44,6 +45,28 @@ def create_app(test_config=None):
         response.headers['Content-Type'] = 'text/plain; charset=utf-8'
         return response
 
+    def handle_donate_mozilla_org(path):
+        """
+        Strips language codes from the URL path, redirecting to '/donate/' or its approved subpaths if specified.
+        """
+        # Regex pattern to identify language codes (EX: /en-US/, /fr/)
+        language_code_regex = re.compile(r'^[a-z]{2}(-[A-Z]{2}|-[A-Z][a-z])?/?$')
+        # The default donate path
+        donate_path = '/donate/'
+        # Donate subpaths that exist on foundation.mozilla.org
+        donate_subpaths = ['faq', 'help', 'ways-to-give']
+
+        if path:
+            # Strip language codes from the path and reconstruct it,
+            path_segments = path.strip('/').split('/')
+            filtered_segments = [segment for segment in path_segments if not language_code_regex.match(segment)]
+            cleaned_path = '/'.join(filtered_segments)
+
+            if cleaned_path in donate_subpaths:
+                donate_path += cleaned_path
+
+        return donate_path
+
     @app.route('/', defaults={'path': ''})
     @app.route('/<path:path>')
     def redirector(path):
@@ -56,6 +79,10 @@ def create_app(test_config=None):
 
         if debug:
             print('received request from {}'.format(host))
+
+        # Special handling for donate.mozilla.org requests
+        if 'donate.mozilla.org' in host:
+            path = handle_donate_mozilla_org(path)
 
         # Prevent redirect for resources such as JS, CSS and images and return HTTP 410 Gone
         if path.endswith(('.js', '.css', '.png', '.svg', '.ico', '.txt')):
