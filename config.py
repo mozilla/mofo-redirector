@@ -56,7 +56,7 @@ class Config(object):
         'aidatabase.mozilla.org': (
             'https://foundation.mozilla.org/en/insights/',
             ReturnCodes.PERMANENT,
-            (True, True),
+            (False, False),
         ),
         'donate.mozilla.org': (
             'https://foundation.mozilla.org',
