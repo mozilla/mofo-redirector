@@ -48,6 +48,16 @@ class Config(object):
             ReturnCodes.TEMPORARY,
             (True, True),
         ),
+        'compass.mozillafoundation.org': (
+            'https://foundation.mozilla.org/en/404/',
+            ReturnCodes.TEMPORARY,
+            (False, False),
+        ),
+        'movementbuilding.mozillafoundation.org': (
+            'https://foundation.mozilla.org/en/404/',
+            ReturnCodes.TEMPORARY,
+            (False, False),
+        ),
         'chat.mozillafoundation.org': (
             'https://mozfest.slack.com',
             ReturnCodes.PERMANENT,
