@@ -293,5 +293,10 @@ class Config(object):
             '?utm_source=schedule&utm_medium=redirect&utm_campaign=plaza_closure',
             ReturnCodes.TEMPORARY,
             (False, False)
+        ),
+        'www.mozillapulse.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.PERMANENT,
+            (False, False)
         )
     }
