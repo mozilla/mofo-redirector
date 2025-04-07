@@ -298,5 +298,10 @@ class Config(object):
             'https://foundation.mozilla.org',
             ReturnCodes.PERMANENT,
             (False, False)
+        ),
+        'redirect.mozillafoundation.org': (
+            'https://foundation.mozilla.org',
+            ReturnCodes.PERMANENT,
+            (True, True),
         )
     }
