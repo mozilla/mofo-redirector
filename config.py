@@ -303,5 +303,5 @@ class Config(object):
             'https://foundation.mozilla.org',
             ReturnCodes.PERMANENT,
             (True, True),
-        ),
+        )
     }
