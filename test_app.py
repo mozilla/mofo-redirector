@@ -1,4 +1,4 @@
-from app import create_app
+from app import create_app, REDIRECT_MAP
 from config import ReturnCodes
 
 
@@ -145,3 +145,30 @@ def test_donate_mozilla_org_redirect_handling():
     # Test redirection for the root path
     response = test_client.get("/", headers=[("Host", "donate.mozilla.org")])
     assert_redirect(response, 301, "https://foundation.mozilla.org/donate/")
+
+
+def test_keyvalue_redirect_exact_match():
+    # Inject key/value redirect map for this test
+    REDIRECT_MAP.clear()
+    REDIRECT_MAP["/about/trademarks"] = {
+        "redirect_to": "https://redirect.mozillafoundation.org/en/who-we-are/licensing/",
+        "is_permanent": True,
+    }
+
+    test_client = client({})  # No host rules needed
+
+    response = test_client.get("/about/trademarks", headers=[("Host", "redirect.mozillafoundation.org")])
+    assert_redirect(response, 301, "https://redirect.mozillafoundation.org/en/who-we-are/licensing/")
+
+
+def test_keyvalue_redirect_with_query_string():
+    REDIRECT_MAP.clear()
+    REDIRECT_MAP["/about/trademarks/?q=test&utf=a_campaign"] = {
+        "redirect_to": "https://redirect.mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign",
+        "is_permanent": False,
+    }
+
+    test_client = client({})
+
+    response = test_client.get("/about/trademarks", query_string="q=test&utf=a_campaign", headers=[("Host", "redirect.mozillafoundation.org")])
+    assert_redirect(response, 302, "https://redirect.mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign")

@@ -1,4 +1,4 @@
-import re
+import re, json
 from urllib.parse import (
     urlparse,
     urlunparse,
@@ -13,6 +13,60 @@ from flask import (
     make_response,
 )
 
+REDIRECT_MAP = {}
+
+def load_redirect_map(path='foundation.mozilla.org_wagtail_redirects.json'):
+    """
+    Load the foundation.mozilla.org redirects into memory.
+    Not necessary to offload to some external resource like Redis yet.
+    """
+
+    global REDIRECT_MAP
+    try:
+        with open(path) as f:
+            REDIRECT_MAP = json.load(f)
+    except FileNotFoundError:
+        REDIRECT_MAP = {}
+
+load_redirect_map()
+
+def get_keyvalue_redirect(path, query_string, redirect_map, debug=False):
+    """
+    Checks the in-memory key/value redirect map and returns a redirect response
+    if a match is found. Returns None otherwise.
+    """
+    full_path = '/' + path
+
+    # Normalize: try as-is and strip trailing slash
+    candidates = [full_path]
+    if full_path.endswith('/'):
+        candidates.append(full_path.rstrip('/'))
+    else:
+        candidates.append(full_path + '/')
+
+    # Also try full_path + query
+    if query_string:
+        candidates = [f"{p}?{query_string}" for p in candidates] + candidates
+
+    # Try each candidate
+    for candidate in candidates:
+        redirect_entry = redirect_map.get(candidate)
+        if redirect_entry:
+            redirect_url = redirect_entry['redirect_to']
+
+            # If candidate didn't include query string, but the request did, add it
+            if '?' not in candidate and query_string:
+                separator = '&' if '?' in redirect_url else '?'
+                redirect_url = f"{redirect_url}{separator}{query_string}"
+
+            status_code = 301 if redirect_entry.get('is_permanent') else 302
+
+            if debug:
+                print(f"[kv redirect] {candidate} → {redirect_url} ({status_code})")
+
+            return redirect(redirect_url, code=status_code)
+
+    return None
 
 def create_app(test_config=None):
     app = Flask(__name__, static_folder=None)
@@ -87,7 +141,16 @@ def create_app(test_config=None):
         # Prevent redirect for resources such as JS, CSS and images and return HTTP 410 Gone
         if path.endswith(('.js', '.css', '.png', '.svg', '.ico', '.txt')):
             return abort(410)
-
+        
+        # Use key/value redirects to short-circuit foundation.mozilla.org's redirect rule only
+        # Note redirect.mozillafoundation.org for testing until domain switch is live.
+        if 'redirect.mozillafoundation.org' in host:
+            keyvalue_response = get_keyvalue_redirect(
+                path, request.query_string.decode('utf-8'), REDIRECT_MAP, debug
+            )
+            if keyvalue_response:
+                return keyvalue_response
+            
         if host in redirect_rules:
             redirect_target, redirect_code, preserves = redirect_rules[host]
             preserve_path, preserve_query = preserves
