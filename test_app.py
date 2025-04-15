@@ -121,13 +121,13 @@ def test_keyvalue_redirect_exact_match():
     test_client = client({})  # No host rules needed
 
     response = test_client.get("/about/trademarks", headers=[("Host", "redirect.mozillafoundation.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/en/who-we-are/licensing/")
+    assert_redirect(response, 301, "https://mozillafoundation.org/en/who-we-are/licensing/")
 
 
 def test_keyvalue_redirect_with_query_string():
     REDIRECT_MAP.clear()
     REDIRECT_MAP["/about/trademarks/?q=test&utf=a_campaign"] = {
-        "redirect_to": "https://foundation.mozilla.org/en/who-we-are/licensing/?q=test&utf=a_campaign",
+        "redirect_to": "https://mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign",
         "is_permanent": False,
     }
 
@@ -137,5 +137,5 @@ def test_keyvalue_redirect_with_query_string():
         "/about/trademarks", query_string="q=test&utf=a_campaign", headers=[("Host", "redirect.mozillafoundation.org")]
     )
     assert_redirect(
-        response, 302, "https://foundation.mozilla.org/en/who-we-are/licensing/?q=test&utf=a_campaign"
+        response, 302, "https://mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign"
     )
