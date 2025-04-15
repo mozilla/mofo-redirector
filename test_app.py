@@ -1,5 +1,6 @@
-from app import create_app
 from config import ReturnCodes
+
+from app import REDIRECT_MAP, create_app
 
 
 def assert_redirect(response, expected_status_code, expected_location):
@@ -13,22 +14,12 @@ def assert_robots(response):
 
 
 def client(rules):
-    config = {
-        "REDIRECT_RULES": rules,
-        "FORCE_SSL": False,
-        "DEBUG": False
-    }
+    config = {"REDIRECT_RULES": rules, "FORCE_SSL": False, "DEBUG": False}
     return create_app(config).test_client()
 
 
 def test_permanent_redirect():
-    test_client = client(
-        {'example.com': (
-            "https://another-example.com",
-            ReturnCodes.PERMANENT,
-            (False, False)
-        )}
-    )
+    test_client = client({"example.com": ("https://another-example.com", ReturnCodes.PERMANENT, (False, False))})
 
     r = test_client.get("/", headers=[("Host", "example.com")])
 
@@ -36,13 +27,7 @@ def test_permanent_redirect():
 
 
 def test_temporary_redirect():
-    test_client = client(
-        {'example.com': (
-            "https://another-example.com",
-            ReturnCodes.TEMPORARY,
-            (False, False)
-        )}
-    )
+    test_client = client({"example.com": ("https://another-example.com", ReturnCodes.TEMPORARY, (False, False))})
 
     r = test_client.get("/", headers=[("Host", "example.com")])
 
@@ -50,13 +35,7 @@ def test_temporary_redirect():
 
 
 def test_keep_query():
-    test_client = client(
-        {'example.com': (
-            "https://another-example.com",
-            ReturnCodes.TEMPORARY,
-            (False, True)
-        )}
-    )
+    test_client = client({"example.com": ("https://another-example.com", ReturnCodes.TEMPORARY, (False, True))})
 
     r = test_client.get("/", headers=[("Host", "example.com")], query_string="such_query=very_value")
 
@@ -64,13 +43,7 @@ def test_keep_query():
 
 
 def test_keep_path():
-    test_client = client(
-        {'example.com': (
-            "https://another-example.com",
-            ReturnCodes.TEMPORARY,
-            (True, False)
-        )}
-    )
+    test_client = client({"example.com": ("https://another-example.com", ReturnCodes.TEMPORARY, (True, False))})
 
     r = test_client.get("/path/", headers=[("Host", "example.com")])
 
@@ -78,13 +51,7 @@ def test_keep_path():
 
 
 def test_keep_path_and_query():
-    test_client = client(
-        {'example.com': (
-            "https://another-example.com",
-            ReturnCodes.TEMPORARY,
-            (True, True)
-        )}
-    )
+    test_client = client({"example.com": ("https://another-example.com", ReturnCodes.TEMPORARY, (True, True))})
 
     r = test_client.get("/path/", headers=[("Host", "example.com")], query_string="such_query=very_value")
 
@@ -92,13 +59,7 @@ def test_keep_path_and_query():
 
 
 def test_robots():
-    test_client = client(
-        {'example.com': (
-            "https://another-example.com",
-            ReturnCodes.TEMPORARY,
-            (True, False)
-        )}
-    )
+    test_client = client({"example.com": ("https://another-example.com", ReturnCodes.TEMPORARY, (True, False))})
 
     r = test_client.get("/robots.txt", headers=[("Host", "example.com")])
 
@@ -110,13 +71,15 @@ def test_donate_mozilla_org_redirect_handling():
     Validates redirection logic for donate.mozilla.org, ensuring correct path handling,
     removal of language codes, and preservation of query parameters.
     """
-    test_client = client({
-        'donate.mozilla.org': (
-            'https://foundation.mozilla.org',
-            ReturnCodes.PERMANENT,
-            (True, True),
-        ),
-    })
+    test_client = client(
+        {
+            "donate.mozilla.org": (
+                "https://foundation.mozilla.org",
+                ReturnCodes.PERMANENT,
+                (True, True),
+            ),
+        }
+    )
 
     # Test that an approved path with a language code redirects correctly
     response = test_client.get("/en-US/help", headers=[("Host", "donate.mozilla.org")])
@@ -145,3 +108,34 @@ def test_donate_mozilla_org_redirect_handling():
     # Test redirection for the root path
     response = test_client.get("/", headers=[("Host", "donate.mozilla.org")])
     assert_redirect(response, 301, "https://foundation.mozilla.org/donate/")
+
+
+def test_keyvalue_redirect_exact_match():
+    # Inject key/value redirect map for this test
+    REDIRECT_MAP.clear()
+    REDIRECT_MAP["/about/trademarks"] = {
+        "redirect_to": "https://redirect.mozillafoundation.org/en/who-we-are/licensing/",
+        "is_permanent": True,
+    }
+
+    test_client = client({})  # No host rules needed
+
+    response = test_client.get("/about/trademarks", headers=[("Host", "redirect.mozillafoundation.org")])
+    assert_redirect(response, 301, "https://redirect.mozillafoundation.org/en/who-we-are/licensing/")
+
+
+def test_keyvalue_redirect_with_query_string():
+    REDIRECT_MAP.clear()
+    REDIRECT_MAP["/about/trademarks/?q=test&utf=a_campaign"] = {
+        "redirect_to": "https://redirect.mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign",
+        "is_permanent": False,
+    }
+
+    test_client = client({})
+
+    response = test_client.get(
+        "/about/trademarks", query_string="q=test&utf=a_campaign", headers=[("Host", "redirect.mozillafoundation.org")]
+    )
+    assert_redirect(
+        response, 302, "https://redirect.mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign"
+    )
