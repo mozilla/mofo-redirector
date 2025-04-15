@@ -114,7 +114,7 @@ def test_keyvalue_redirect_exact_match():
     # Inject key/value redirect map for this test
     REDIRECT_MAP.clear()
     REDIRECT_MAP["/about/trademarks"] = {
-        "redirect_to": "https://foundation.mozilla.org/en/who-we-are/licensing/",
+        "redirect_to": "https://mozillafoundation.org/en/who-we-are/licensing/",
         "is_permanent": True,
     }
 
