@@ -114,20 +114,20 @@ def test_keyvalue_redirect_exact_match():
     # Inject key/value redirect map for this test
     REDIRECT_MAP.clear()
     REDIRECT_MAP["/about/trademarks"] = {
-        "redirect_to": "https://mozillafoundation.org/en/who-we-are/licensing/",
+        "redirect_to": "https://www.mozillafoundation.org/en/who-we-are/licensing/",
         "is_permanent": True,
     }
 
     test_client = client({})  # No host rules needed
 
     response = test_client.get("/about/trademarks", headers=[("Host", "redirect.mozillafoundation.org")])
-    assert_redirect(response, 301, "https://mozillafoundation.org/en/who-we-are/licensing/")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/en/who-we-are/licensing/")
 
 
 def test_keyvalue_redirect_with_query_string():
     REDIRECT_MAP.clear()
     REDIRECT_MAP["/about/trademarks/?q=test&utf=a_campaign"] = {
-        "redirect_to": "https://mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign",
+        "redirect_to": "https://www.mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign",
         "is_permanent": False,
     }
 
@@ -137,5 +137,5 @@ def test_keyvalue_redirect_with_query_string():
         "/about/trademarks", query_string="q=test&utf=a_campaign", headers=[("Host", "redirect.mozillafoundation.org")]
     )
     assert_redirect(
-        response, 302, "https://mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign"
+        response, 302, "https://www.mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign"
     )
