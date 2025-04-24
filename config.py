@@ -300,7 +300,7 @@ class Config(object):
             (False, False)
         ),
         'redirect.mozillafoundation.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (True, True),
         )
