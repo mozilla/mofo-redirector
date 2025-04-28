@@ -10,7 +10,7 @@ def assert_redirect(response, expected_status_code, expected_location):
 
 def assert_robots(response):
     assert response.status_code == 200
-    assert response.get_data(as_text=True) == "User-agent: *\nDisallow: /"
+    assert response.get_data(as_text=True) == "User-agent: *\n"
 
 
 def client(rules):

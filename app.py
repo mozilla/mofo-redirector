@@ -90,7 +90,7 @@ def create_app(test_config=None):
 
     @app.route("/robots.txt")
     def send_robots_txt():
-        response = make_response("User-agent: *\nDisallow: /")
+        response = make_response("User-agent: *\n")
         response.headers["Content-Type"] = "text/plain; charset=utf-8"
         return response
 
