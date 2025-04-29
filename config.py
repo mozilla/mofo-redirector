@@ -44,17 +44,17 @@ class Config(object):
     # At [2]: a Tuple, indicating if the path and query are to be preserved ( {path}, {query} )
     REDIRECT_RULES = {
         'mofo-redirector.herokuapp.com': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.TEMPORARY,
             (True, True),
         ),
         'compass.mozillafoundation.org': (
-            'https://foundation.mozilla.org/404/',
+            'https://www.mozillafoundation.org/404/',
             ReturnCodes.PERMANENT,
             (False, False),
         ),
         'movementbuilding.mozillafoundation.org': (
-            'https://foundation.mozilla.org/404/',
+            'https://www.mozillafoundation.org/404/',
             ReturnCodes.PERMANENT,
             (False, False),
         ),
@@ -64,32 +64,32 @@ class Config(object):
             (False, False),
         ),
         'aidatabase.mozilla.org': (
-            'https://foundation.mozilla.org/en/insights/',
+            'https://www.mozillafoundation.org/en/insights/',
             ReturnCodes.PERMANENT,
             (False, False),
         ),
         'donate.mozilla.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (True, True),
         ),
         'www.hivelearningnetwork.org': (
-            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            'https://www.mozillafoundation.org/en/artifacts/hive-learning-networks',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'hivelearningnetwork.org': (
-            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            'https://www.mozillafoundation.org/en/artifacts/hive-learning-networks',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.hivelearningnetworks.org': (
-            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            'https://www.mozillafoundation.org/en/artifacts/hive-learning-networks',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'hivelearningnetworks.org': (
-            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks',
+            'https://www.mozillafoundation.org/en/artifacts/hive-learning-networks',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
@@ -104,27 +104,27 @@ class Config(object):
             (False, False)
         ),
         'www.typeoutloud.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'science.typeoutloud.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.responsiblecs.org': (
-            'https://foundation.mozilla.org/initiatives/responsible-cs/',
+            'https://www.mozillafoundation.org/initiatives/responsible-cs/',
             ReturnCodes.PERMANENT,
             (False, True)
         ),
         'www.responsiblecschallenge.org': (
-            'https://foundation.mozilla.org/initiatives/responsible-cs/',
+            'https://www.mozillafoundation.org/initiatives/responsible-cs/',
             ReturnCodes.PERMANENT,
             (False, True)
         ),
         'www.iheartopendata.org': (
-            'https://foundation.mozilla.org/campaigns/i-heart-open-data/',
+            'https://www.mozillafoundation.org/campaigns/i-heart-open-data/',
             ReturnCodes.PERMANENT,
             (False, True)
         ),
@@ -154,47 +154,47 @@ class Config(object):
             (False, False)
         ),
         'popcorn.webmaker.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'postcrimes.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.postcrimes.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'mozillapopcorn.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.mozillapopcorn.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'maker.mozillapopcorn.org': (
-            'https://foundation.mozilla.org/en/artifacts/popcorn-maker',
+            'https://www.mozillafoundation.org/en/artifacts/popcorn-maker',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'static.mozillapopcorn.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'tedglobal.mozillapopcorn.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'directory.hivelearningnetworks.org': (
-            'https://foundation.mozilla.org/en/artifacts/hive-learning-networks/',
+            'https://www.mozillafoundation.org/en/artifacts/hive-learning-networks/',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
@@ -204,51 +204,51 @@ class Config(object):
             (True, True)
         ),
         'firefox10.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.firefox10.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'www.drumbeat.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         # Removing to stop scraper DDoSing MoFo. The Thimble project was archived 2019.
         #
         # 'thimble.mozilla.org': (
-        #     'https://foundation.mozilla.org/en/artifacts/thimble/',
+        #     'https://www.mozillafoundation.org/en/artifacts/thimble/',
         #     ReturnCodes.PERMANENT,
         #     (False, False)
         # ),
         # 'thimble.webmaker.org': (
-        #     'https://foundation.mozilla.org/en/artifacts/thimble/',
+        #     'https://www.mozillafoundation.org/en/artifacts/thimble/',
         #     ReturnCodes.PERMANENT,
         #     (False, False)
         # ),
         'www.mozillathimblelivepreview.net': (
-            'https://foundation.mozilla.org/en/artifacts/thimble/',
+            'https://www.mozillafoundation.org/en/artifacts/thimble/',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'goggles.mozilla.org': (
-            'https://foundation.mozilla.org/en/artifacts/x-ray-goggles/',
+            'https://www.mozillafoundation.org/en/artifacts/x-ray-goggles/',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         'goggles.webmaker.org': (
-            'https://foundation.mozilla.org/en/artifacts/x-ray-goggles/',
+            'https://www.mozillafoundation.org/en/artifacts/x-ray-goggles/',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
         # Removing to stop scraper DDoSing MoFo. The Thimble project was archived 2019.
         #
         # 'www.thimbleprojects.org': (
-        #     'https://foundation.mozilla.org/en/artifacts/thimble/',
+        #     'https://www.mozillafoundation.org/en/artifacts/thimble/',
         #     ReturnCodes.PERMANENT,
         #     (False, False)
         # ),
@@ -258,28 +258,28 @@ class Config(object):
             (True, True)
         ),
         'learning.mozilla.org': (
-            'https://foundation.mozilla.org/en/opportunity/web-literacy/',
+            'https://www.mozillafoundation.org/en/opportunity/web-literacy/',
             ReturnCodes.PERMANENT,
             (False, True)
         ),
         'teach.mozilla.org': (
-            'https://foundation.mozilla.org/en/opportunity/web-literacy/',
+            'https://www.mozillafoundation.org/en/opportunity/web-literacy/',
             ReturnCodes.PERMANENT,
             (False, True)
 
         ),
         'www.webmaker.org': (
-            'https://foundation.mozilla.org/en/artifacts/webmaker/',
+            'https://www.mozillafoundation.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
             (False, True)
         ),
         'beta.webmaker.org': (
-            'https://foundation.mozilla.org/en/artifacts/webmaker/',
+            'https://www.mozillafoundation.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
             (False, True)
         ),
         'events.webmaker.org': (
-            'https://foundation.mozilla.org/en/artifacts/webmaker/',
+            'https://www.mozillafoundation.org/en/artifacts/webmaker/',
             ReturnCodes.PERMANENT,
             (False, True)
         ),
@@ -295,13 +295,13 @@ class Config(object):
             (False, False)
         ),
         'www.mozillapulse.org': (
-            'https://foundation.mozilla.org',
+            'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (False, False)
         ),
-        'redirect.mozillafoundation.org': (
+        'foundation.mozilla.org': (
             'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
             (True, True),
-        )
+        ),
     }
