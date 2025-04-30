@@ -304,4 +304,9 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (True, True),
         ),
+        'mozillafoundation.org': (
+            'https://www.mozillafoundation.org',
+            ReturnCodes.PERMANENT,
+            (True, True),
+        )
     }
