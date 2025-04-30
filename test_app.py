@@ -74,7 +74,7 @@ def test_donate_mozilla_org_redirect_handling():
     test_client = client(
         {
             "donate.mozilla.org": (
-                "https://foundation.mozilla.org",
+                "https://www.mozillafoundation.org",
                 ReturnCodes.PERMANENT,
                 (True, True),
             ),
@@ -83,31 +83,31 @@ def test_donate_mozilla_org_redirect_handling():
 
     # Test that an approved path with a language code redirects correctly
     response = test_client.get("/en-US/help", headers=[("Host", "donate.mozilla.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/donate/help")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/donate/help")
 
     # Test that an unapproved path with a language code defaults to /donate/
     response = test_client.get("/fr/unapproved-path", headers=[("Host", "donate.mozilla.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/donate/")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/donate/")
 
     # Test redirection for an approved path without a language code
     response = test_client.get("/ways-to-give", headers=[("Host", "donate.mozilla.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/donate/ways-to-give")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/donate/ways-to-give")
 
     # Test redirection for a path that includes multiple language codes
     response = test_client.get("/en-US/es-MX/faq", headers=[("Host", "donate.mozilla.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/donate/faq")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/donate/faq")
 
     # Test redirection for a path that resembles a language code but is not approved
     response = test_client.get("/custom-en-section", headers=[("Host", "donate.mozilla.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/donate/")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/donate/")
 
     # Test redirection with query parameters preserved
     response = test_client.get("/en-US/?q=donate", headers=[("Host", "donate.mozilla.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/donate/?q=donate")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/donate/?q=donate")
 
     # Test redirection for the root path
     response = test_client.get("/", headers=[("Host", "donate.mozilla.org")])
-    assert_redirect(response, 301, "https://foundation.mozilla.org/donate/")
+    assert_redirect(response, 301, "https://www.mozillafoundation.org/donate/")
 
 
 def test_keyvalue_redirect_exact_match():
@@ -120,7 +120,7 @@ def test_keyvalue_redirect_exact_match():
 
     test_client = client({})  # No host rules needed
 
-    response = test_client.get("/about/trademarks", headers=[("Host", "redirect.mozillafoundation.org")])
+    response = test_client.get("/about/trademarks", headers=[("Host", "foundation.mozilla.org")])
     assert_redirect(response, 301, "https://www.mozillafoundation.org/en/who-we-are/licensing/")
 
 
@@ -134,7 +134,7 @@ def test_keyvalue_redirect_with_query_string():
     test_client = client({})
 
     response = test_client.get(
-        "/about/trademarks", query_string="q=test&utf=a_campaign", headers=[("Host", "redirect.mozillafoundation.org")]
+        "/about/trademarks", query_string="q=test&utf=a_campaign", headers=[("Host", "foundation.mozilla.org")]
     )
     assert_redirect(
         response, 302, "https://www.mozillafoundation.org/en/who-we-are/licensing/?q=test&utf=a_campaign"

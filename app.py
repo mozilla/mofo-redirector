@@ -138,8 +138,8 @@ def create_app(test_config=None):
             return abort(410)
 
         # Use key/value redirects to short-circuit foundation.mozilla.org's redirect rule only
-        # Note redirect.mozillafoundation.org for testing until domain switch is live.
-        if "redirect.mozillafoundation.org" in host:
+        # Note foundation.mozilla.org for testing until domain switch is live.
+        if "foundation.mozilla.org" in host:
             keyvalue_response = get_keyvalue_redirect(path, request.query_string.decode("utf-8"), REDIRECT_MAP, debug)
             if keyvalue_response:
                 return keyvalue_response

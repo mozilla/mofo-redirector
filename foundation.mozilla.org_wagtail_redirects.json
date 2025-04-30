@@ -22559,10 +22559,6 @@
     "redirect_to": "https://www.mozillafoundation.org/fy-NL/what-we-fund/programs/common-voice-kiswahili-awards/fellowships/",
     "is_permanent": true
   },
-  "/nl/what-we-fund/programs/fellows-faq": {
-    "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/fellows-faq/",
-    "is_permanent": true
-  },
   "/fy-NL/what-we-fund/awards/common-voice-kiswahili-awards/learning-and-impact": {
     "redirect_to": "https://www.mozillafoundation.org/fy-NL/what-we-fund/programs/common-voice-kiswahili-awards/learning-and-impact/",
     "is_permanent": true
@@ -24383,6 +24379,10 @@
     "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/fellowship-projects/",
     "is_permanent": true
   },
+  "/nl/what-we-fund/programs/fellows-faq": {
+    "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/fellows-faq/",
+    "is_permanent": true
+  },
   "/nl/what-we-fund/programs/fellows-for-tech-and-society": {
     "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/fellows-for-tech-and-society/",
     "is_permanent": true
@@ -24601,10 +24601,6 @@
   },
   "/nl/what-we-fund/programs/with-great-tech-comes-great-responsibility/insights-from-tech-workers-today": {
     "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/with-great-tech-comes-great-responsibility/insights-from-tech-workers-today/",
-    "is_permanent": true
-  },
-  "/fr/what-we-fund/programs/senior-fellows/call-for-proposals": {
-    "redirect_to": "https://www.mozillafoundation.org/fr/what-we-fund/programs/senior-fellows/call-for-proposals/",
     "is_permanent": true
   },
   "/nl/what-we-fund/programs/with-great-tech-comes-great-responsibility/addressing-ethical-issues-as-a-tech-worker": {
@@ -24845,6 +24841,10 @@
   },
   "/fr/what-we-fund/programs/senior-fellows/fellowship-details": {
     "redirect_to": "https://www.mozillafoundation.org/fr/what-we-fund/programs/senior-fellows/fellowship-details/",
+    "is_permanent": true
+  },
+  "/fr/what-we-fund/programs/senior-fellows/call-for-proposals": {
+    "redirect_to": "https://www.mozillafoundation.org/fr/what-we-fund/programs/senior-fellows/call-for-proposals/",
     "is_permanent": true
   },
   "/fr/what-we-fund/programs/senior-fellows/fellow-profiles": {
@@ -25883,6 +25883,10 @@
     "redirect_to": "https://www.mozillafoundation.org/de/what-we-fund/programs/teaching-responsible-computing-playbook/topics/working-across-disciplines/",
     "is_permanent": true
   },
+  "/pl/what-we-fund/programs/fellows-for-tech-and-society/program-design": {
+    "redirect_to": "https://www.mozillafoundation.org/pl/what-we-fund/programs/fellows-for-tech-and-society/program-design/",
+    "is_permanent": true
+  },
   "/de/what-we-fund/programs/teaching-responsible-computing-playbook/topics/working-across-institutions": {
     "redirect_to": "https://www.mozillafoundation.org/de/what-we-fund/programs/teaching-responsible-computing-playbook/topics/working-across-institutions/",
     "is_permanent": true
@@ -26117,10 +26121,6 @@
   },
   "/pl/what-we-fund/programs/fellows-for-tech-and-society": {
     "redirect_to": "https://www.mozillafoundation.org/pl/what-we-fund/programs/fellows-for-tech-and-society/",
-    "is_permanent": true
-  },
-  "/pl/what-we-fund/programs/fellows-for-tech-and-society/program-design": {
-    "redirect_to": "https://www.mozillafoundation.org/pl/what-we-fund/programs/fellows-for-tech-and-society/program-design/",
     "is_permanent": true
   },
   "/pl/what-we-fund/programs/fellows-for-tech-and-society/information-session": {
@@ -26883,10 +26883,6 @@
     "redirect_to": "https://www.mozillafoundation.org/es/what-we-fund/programs/shaping-the-future/",
     "is_permanent": true
   },
-  "/sw/what-we-fund/programs/governance-alone-wont-solve-the-ai-problem": {
-    "redirect_to": "https://www.mozillafoundation.org/sw/what-we-fund/programs/governance-alone-wont-solve-the-ai-problem/",
-    "is_permanent": true
-  },
   "/es/what-we-fund/programs/security-military-operations-will-have-new-commanders-ai-robotics-autonomous-technology": {
     "redirect_to": "https://www.mozillafoundation.org/es/what-we-fund/programs/security-military-operations-will-have-new-commanders-ai-robotics-autonomous-technology/",
     "is_permanent": true
@@ -27343,6 +27339,10 @@
     "redirect_to": "https://www.mozillafoundation.org/sw/what-we-fund/programs/digital-safeguards-will-protect-human-rights-defenders-and-drive-the-future-of-online-activism/",
     "is_permanent": true
   },
+  "/sw/what-we-fund/programs/governance-alone-wont-solve-the-ai-problem": {
+    "redirect_to": "https://www.mozillafoundation.org/sw/what-we-fund/programs/governance-alone-wont-solve-the-ai-problem/",
+    "is_permanent": true
+  },
   "/sw/what-we-fund/programs/labor-justice-will-take-over-the-future-of-work": {
     "redirect_to": "https://www.mozillafoundation.org/sw/what-we-fund/programs/labor-justice-will-take-over-the-future-of-work/",
     "is_permanent": true
@@ -27795,10 +27795,6 @@
     "redirect_to": "https://www.mozillafoundation.org/en/what-we-fund/programs/technology-surrenders-to-local-complexity/",
     "is_permanent": true
   },
-  "/nl/what-we-fund/opportunities/senior-fellows/fellow-profiles/brandi-geurkink": {
-    "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/senior-fellows/fellow-profiles/brandi-geurkink/",
-    "is_permanent": true
-  },
   "/en/what-we-fund/opportunities/digital-safeguards-will-protect-human-rights-defenders-and-drive-the-future-of-online-activism": {
     "redirect_to": "https://www.mozillafoundation.org/en/what-we-fund/programs/digital-safeguards-will-protect-human-rights-defenders-and-drive-the-future-of-online-activism/",
     "is_permanent": true
@@ -28023,6 +28019,10 @@
     "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/senior-fellows/fellow-profiles/bobi-rakova/",
     "is_permanent": true
   },
+  "/nl/what-we-fund/opportunities/senior-fellows/fellow-profiles/brandi-geurkink": {
+    "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/senior-fellows/fellow-profiles/brandi-geurkink/",
+    "is_permanent": true
+  },
   "/nl/what-we-fund/opportunities/senior-fellows/fellow-profiles/jasmine-mcnealy": {
     "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/senior-fellows/fellow-profiles/jasmine-mcnealy/",
     "is_permanent": true
@@ -28233,10 +28233,6 @@
   },
   "/nl/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/call-for-proposals": {
     "redirect_to": "https://www.mozillafoundation.org/nl/what-we-fund/programs/Africa-Mradi-IRL-Fund/call-for-proposals/",
-    "is_permanent": true
-  },
-  "/pl/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/grant-making": {
-    "redirect_to": "https://www.mozillafoundation.org/pl/what-we-fund/programs/Africa-Mradi-IRL-Fund/grant-making/",
     "is_permanent": true
   },
   "/nl/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/call-for-proposals/grantmaking-process": {
@@ -28583,6 +28579,10 @@
     "redirect_to": "https://www.mozillafoundation.org/fr/what-we-fund/programs/teaching-responsible-computing-playbook/topics/structured-thinking/",
     "is_permanent": true
   },
+  "/fy-NL/what-we-fund/opportunities/fellowships-faq": {
+    "redirect_to": "https://www.mozillafoundation.org/fy-NL/what-we-fund/programs/fellowships-faq/",
+    "is_permanent": true
+  },
   "/fr/what-we-fund/opportunities/teaching-responsible-computing-playbook/topics/student-team-dynamics": {
     "redirect_to": "https://www.mozillafoundation.org/fr/what-we-fund/programs/teaching-responsible-computing-playbook/topics/student-team-dynamics/",
     "is_permanent": true
@@ -28801,10 +28801,6 @@
   },
   "/fy-NL/what-we-fund/opportunities/fellows-for-open-internet-engineering": {
     "redirect_to": "https://www.mozillafoundation.org/fy-NL/what-we-fund/programs/fellows-for-open-internet-engineering/",
-    "is_permanent": true
-  },
-  "/fy-NL/what-we-fund/opportunities/fellowships-faq": {
-    "redirect_to": "https://www.mozillafoundation.org/fy-NL/what-we-fund/programs/fellowships-faq/",
     "is_permanent": true
   },
   "/fy-NL/what-we-fund/opportunities/fellowships-host-organizations-2019-2020": {
@@ -29999,6 +29995,10 @@
     "redirect_to": "https://www.mozillafoundation.org/pl/what-we-fund/programs/Africa-Mradi-IRL-Fund/call-for-proposals/award-tracks/",
     "is_permanent": true
   },
+  "/pl/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/grant-making": {
+    "redirect_to": "https://www.mozillafoundation.org/pl/what-we-fund/programs/Africa-Mradi-IRL-Fund/grant-making/",
+    "is_permanent": true
+  },
   "/pl/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/africa-mradi-irl-fund": {
     "redirect_to": "https://www.mozillafoundation.org/pl/what-we-fund/programs/Africa-Mradi-IRL-Fund/africa-mradi-irl-fund/",
     "is_permanent": true
@@ -30223,10 +30223,6 @@
     "redirect_to": "https://www.mozillafoundation.org/pt-BR/what-we-fund/programs/senior-fellows/fellow-profiles/lucy-purdon/",
     "is_permanent": true
   },
-  "/pt-BR/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/grant-making": {
-    "redirect_to": "https://www.mozillafoundation.org/pt-BR/what-we-fund/programs/Africa-Mradi-IRL-Fund/grant-making/",
-    "is_permanent": true
-  },
   "/pt-BR/what-we-fund/opportunities/senior-fellows/fellow-profiles/tarcizio-silva": {
     "redirect_to": "https://www.mozillafoundation.org/pt-BR/what-we-fund/programs/senior-fellows/fellow-profiles/tarcizio-silva/",
     "is_permanent": true
@@ -30433,6 +30429,10 @@
   },
   "/pt-BR/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/call-for-proposals/award-tracks": {
     "redirect_to": "https://www.mozillafoundation.org/pt-BR/what-we-fund/programs/Africa-Mradi-IRL-Fund/call-for-proposals/award-tracks/",
+    "is_permanent": true
+  },
+  "/pt-BR/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/grant-making": {
+    "redirect_to": "https://www.mozillafoundation.org/pt-BR/what-we-fund/programs/Africa-Mradi-IRL-Fund/grant-making/",
     "is_permanent": true
   },
   "/pt-BR/what-we-fund/opportunities/Africa-Mradi-IRL-Fund/africa-mradi-irl-fund": {
@@ -31445,6 +31445,42 @@
   },
   "/sw/campaigns/tell-french-lawmakers-dont-break-encryption-on-messaging-services-like-whatsapp-signal-and-proton-mail": {
     "redirect_to": "https://www.mozillafoundation.org/sw/campaigns/tell-french-lawmakers-dont-break-encryption/",
+    "is_permanent": true
+  },
+  "/en/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/en/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/nl/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/nl/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/fr/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/fr/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/fy-NL/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/fy-NL/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/de/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/de/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/pl/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/pl/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/pt-BR/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/pt-BR/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/es/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/es/campaigns/defend-encryption-worldwide/",
+    "is_permanent": true
+  },
+  "/sw/campaigns/sign-the-petition-its-time-to-defend-encryption-worldwide": {
+    "redirect_to": "https://www.mozillafoundation.org/sw/campaigns/defend-encryption-worldwide/",
     "is_permanent": true
   }
 }
