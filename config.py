@@ -54,7 +54,7 @@ class Config(object):
             (False, False),
         ),
         'movementbuilding.mozillafoundation.org': (
-            'https://www.mozillafoundation.org/404/',
+            'https://www.mozillafoundation.org/en/research/library/movement-building-landscape-analysis-acting-on-shared-purpose/',
             ReturnCodes.PERMANENT,
             (False, False),
         ),
