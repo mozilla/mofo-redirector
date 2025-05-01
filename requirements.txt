@@ -20,7 +20,7 @@ markupsafe==2.1.2
     #   werkzeug
 python-dotenv==1.0.0
     # via -r requirements.in
-werkzeug==2.2.3
+werkzeug==3.0.1
     # via flask
 
 # The following packages are considered to be unsafe in a requirements file:
