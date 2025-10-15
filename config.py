@@ -300,6 +300,16 @@ class Config(object):
             ReturnCodes.PERMANENT,
             (False, False)
         ),
+        'www.nothingpersonal.net': (
+            'https://www.mozillafoundation.org/en/nothing-personal/',
+            ReturnCodes.PERMANENT,
+            (False, False)
+        ),
+        'www.nothingpersonal.org': (
+            'https://www.mozillafoundation.org/en/nothing-personal/',
+            ReturnCodes.PERMANENT,
+            (False, False)
+        ),
         'foundation.mozilla.org': (
             'https://www.mozillafoundation.org',
             ReturnCodes.PERMANENT,
